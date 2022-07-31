@@ -1,12 +1,11 @@
-
-
 .presentation {
-    background-image: url("../images/ej.jpg");
+    background-image: url("../images/bg.jpg");
+    filter: saturate(.3);
     background-size: cover;
+    z-index: 0;
 }
 
-.presentation > div {
-    background-color: rgba(0, 0, 0, 0.61);
+.presentation>div {
     color: white;
 }
 
@@ -39,11 +38,25 @@
     content: '❓ ';
 }
 
-.styledList li > * {
+.styledList li>* {
     color: black;
     text-decoration: none;
 }
 
-.styledList li > *:hover {
-    font-weight: 400;
+.styledList li>*:hover {
+    font-weight: 700;
+}
+
+.leftSection {
+    background-color: #3f464d;
+    color: white;
+}
+
+.rightSection {
+    background-color: white;
+    color: black;
+}
+
+.projectsList {
+    font-weight: 600;
 }
