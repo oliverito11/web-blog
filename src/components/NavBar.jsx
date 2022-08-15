@@ -13,8 +13,8 @@ function NavBar({ active, page }) {
             <span className="navbar-toggler-icon"></span>
           </button>
           <ul className="dropdown-menu dropdown-menu-end">
-            <li><Link to="/projects" className={active === "projects" ? "dropdown-item active" : "dropdown-item"} replace>Projects</Link></li>
-            <li><Link to="/tutorials" className={active === "tutorials" ? "dropdown-item active" : "dropdown-item"} replace>Tutorials</Link></li>
+            <li><Link to="/projects" className={active === "Projects" ? "dropdown-item active" : "dropdown-item"} replace>Projects</Link></li>
+            <li><Link to="/tutorials" className={active === "Tutorials" ? "dropdown-item active" : "dropdown-item"} replace>Tutorials</Link></li>
             <li><Link to="/" className={active === "home" ? "dropdown-item active" : "dropdown-item"} replace>About me</Link></li>
           </ul>
         </div>
