@@ -45,10 +45,10 @@ function SearchBox({ valueChanged }) {
                         <input className='datePickers form-control' type="date" aria-label="Date" defaultValue={dateToShow} onChange={(e) => setDate2(e.target.value)} />
                     </div>
 
-                    <input type="button" className="my-3" onClick={() => {
+                    <input type="button" className="my-3 btn-green" onClick={() => {
                         valueChanged(searchString, date1, date2);
                     }} value="Search" />
-                    <input type="button" onClick={() => {
+                    <input type="button" className='btn-green' onClick={() => {
                         valueChanged(null, null, null)
                         setText('');
                     }} value="Remove filters" />
