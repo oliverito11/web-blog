@@ -2,24 +2,23 @@ import '../styles/Tutorial.css'
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { tutorialList } from '../config/dataTutorials.js';
 import { Link } from 'react-router-dom';
 
 import BackToTop from "../components/BackToTop";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
-function Tutorial() {
+function ItemList ({list}) {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
 
   useEffect(() => {
-    let bl = tutorialList.find((b) => b.id === parseInt(id));
+    let bl = list.find((b) => b.id === parseInt(id));
 
     if (bl) {
       setBlog(bl);
     }
-  }, []);
+  }, [list]);
 
   const renderData = () => {
     if (!blog) return null;
@@ -41,7 +40,7 @@ function Tutorial() {
   };
   return !blog ? null : (
     <>
-      <NavBar active="tutorials" page="Tutorial" />
+      <NavBar active="projects" page="Project" />
       <div className="container-fluid">
         <div className='row row-cols-1'>
           <div className='cont p-5'>
@@ -66,4 +65,4 @@ function Tutorial() {
   );
 }
 
-export default Tutorial;
+export default ItemList;

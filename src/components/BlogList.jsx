@@ -1,11 +1,27 @@
+import { useEffect, useState } from 'react';
 import BlogItem from './BlogItem';
 
-const BlogList = ({ blogs }) => {
+const BlogList = ({ blogs, searchStr, date1, date2 }) => {
+  const [filteredList, setFileterdList] = useState([]);
+  useEffect(() => {
+    console.log(filteredList);
+    if(searchStr === null) {
+      if(date1 === null || date2 === null) {
+        setFileterdList(blogs);
+      }
+    }
+    else {
+      setFileterdList(blogs.filter((blog) => (searchStr.trim() === '' ? true : blog.title.includes(searchStr)) &&
+      (date1 === null ? true :  blog.date > date1) && (date2 === null ? true : blog.date < date2)));
+    }
+    console.log("List after: " + filteredList);
+  }, [searchStr, date1, date2])
+  
   return (
     <>
-      {blogs.map((blog) => (
-        <BlogItem blog={blog} key={blog.id} />
-      ))}
+      {
+        filteredList.map((blog) => <BlogItem blog={blog} key={blog.id} />)
+      }
     </>
   );
 };
