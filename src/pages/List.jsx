@@ -1,4 +1,4 @@
-import '../styles/TutorialsList.css'
+import '../styles/List.css'
 import NavBar from '../components/NavBar';
 import SearchBox from '../components/SearchBox';
 import Footer from '../components/Footer';
@@ -26,7 +26,6 @@ function List({ list, page, changePage }) {
 
 
   const valueChanged = (str, d1, d2) => {
-    console.log("Value changed: " + str + ", " + d1 + ", " + d2);
     setSearchStr(str);
     setDate1(d1);
     setDate2(d2);

@@ -1,9 +1,23 @@
 .presentation {
-    background-image: url("../images/bg.jpg");
-    filter: saturate(.3);
+    background-image: url("../images/bg.png");
     background-size: cover;
     z-index: 0;
+    background-position-y: -200px;
 }
+
+@media only screen and (max-width: 991px) {
+    .presentation {
+        background-position-y: 0;
+        background-position-x: -100px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .presentation {
+        background-position-x: -200px;
+    }
+}
+
 
 .presentation>div {
     color: white;

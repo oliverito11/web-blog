@@ -1,4 +1,4 @@
-import '../styles/Tutorial.css'
+import '../styles/ItemList.css'
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
@@ -25,7 +25,7 @@ function ItemList ({list}) {
     let result = [];
     let cont = 0;
     blog.content.forEach(c => {
-      if (c.startsWith("/")) {
+      if (c.startsWith("data:image")) {
         result.push(
           <img key={"img" + cont++} srcSet={c} style={{maxWidth: "50%"}}/>
         );
@@ -54,7 +54,7 @@ function ItemList ({list}) {
               {renderData()}
             </div>
             <div>
-              <Link to="#">Try it!</Link>
+              <a href={blog.tryit} target="__blank">Try it!</a>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ import NavBar from "../components/NavBar";
 import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
 
-import foto from '../images/foto.png';
+import foto from '../images/aboutme.jpg';
 import h from '../images/h.png';
 import tuto from '../images/tuto.png';
 
@@ -65,7 +65,7 @@ function Home() {
           isDesktop ?
             <div className='row row-cols-2'>
               <div className='col-5 d-flex justify-content-center align-items-center'>
-                <img src={foto} width='70%' />
+                <img src={foto} width='10%' />
               </div>
               <div className='col-7'>
                 <div className='text-center fw-bold fs-4 pb-4'>🙍‍♂️ About me</div>
@@ -97,7 +97,7 @@ function Home() {
                 </div>
               </div>
               <div className='d-flex justify-content-center align-items-center'>
-                <img src={foto} width='70%' />
+                <img src={foto} width='10%' />
               </div>
             </div>
         }
