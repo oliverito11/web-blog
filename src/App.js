@@ -12,21 +12,21 @@ function App() {
   const [projectsIndex, setProjectsIndex] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:5000/entries/tutorials/" + tutorialsIndex + "/10")
+    fetch("https://weboliver.fly.dev/entries/tutorials/" + tutorialsIndex + "/10")
       .then((res) => res.json())
-      .then((json) => setTutorialList(json))
+      .then((json) => setTutorialList(json.reverse()))
 
-    fetch("http://localhost:5000/entries/projects/" + projectsIndex + "/10")
+    fetch("https://weboliver.fly.dev/entries/projects/" + projectsIndex + "/10")
       .then((res) => res.json())
-      .then((json) => setProjectList(json))
+      .then((json) => setProjectList(json.reverse()))
   }, [tutorialsIndex, projectsIndex])
 
   function changePage(index, page) {
     console.log(index + " | " + page);
-    if(page == "tutorials") {
+    if(page === "tutorials") {
       setTutorialsIndex(index * 10)
     }
-    else if (page == "projects") {
+    else if (page === "projects") {
       setProjectsIndex(index * 10)
     }
   }

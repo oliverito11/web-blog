@@ -1,18 +1,43 @@
 .cont {
-  padding: 200px !important;
+  padding: 100px !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .cont {
+    padding: 50px !important;
+    padding-top: 100px !important;
+  }
+
+  .entryImages {
+    max-width: 100% !important;
+  }
+
+  .video {
+    width: 100% !important;
+    height: 50vw !important;
+  }
 }
 
 .headerTitle {
-  font-size: 2.5vw;
+  font-size: 40px;
   font-weight: 600;
 }
 
 .title {
-  font-size: 2vw;
+  font-size: 30px;
 }
 
 .description {
   font-family: 'Segoe UI';
   margin-top: 10px;
-  font-size: 1vw;
+  font-size: 18px;
+}
+
+.entryImages {
+  max-width: 50%;
+}
+
+.video {
+  width: 50%;
+  height: 25vw;
 }
